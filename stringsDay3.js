@@ -8,14 +8,16 @@
 // Remember to keep your code somewhere safe, as you'll need it to decrypt this week's message!
 
 // example key characters -> 'A','_','K','E','Y','!'
-let keys = ['A', '_', 'K', 'E', 'Y', '!'];
+let key = ['A', '_', 'K', 'E', 'Y', '!'];
 let str =
   'AyouEcould!thinkKthisAisYhard_toYreadKbeforeYreplacingEthe_keyYcharacters';
 // // implement key replacement function
 // ' you could think this is hard to read before replacing the key characters'
 // You didn't think I'd just give you the key for the week and let you skip Day 2, did you?
 
-function decryptKeys(arr, str) {
+function decryptKeys(str) {
+  let keys = ['S', 'p', 'a', 'c', 'e'];
+
   return str
     .split('')
     .map((el) => (keys.includes(el) ? ' ' : el))
